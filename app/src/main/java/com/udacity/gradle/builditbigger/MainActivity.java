@@ -7,6 +7,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.udacity.gradle.jokes.HilariousJoker;
+import com.udacity.gradle.jokes.JokerFactory;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -39,8 +42,9 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view){
-        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
+    public void tellAJoke(View view){
+        Toast.makeText(this, JokerFactory.getRandomJoker().tellAJoke(),
+                Toast.LENGTH_SHORT).show();
     }
 
 
