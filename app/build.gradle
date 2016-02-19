@@ -16,6 +16,14 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        shrunk{
+            minifyEnabled true
+            shrinkResources true
+        }
+        notShrunk{
+            minifyEnabled false
+            shrinkResources false
+        }
     }
 }
 
@@ -26,4 +34,5 @@ dependencies {
     compile 'com.google.android.gms:play-services:7.3.0'
     compile project(':jokeslib')
     compile project(':jokesandroidlib')
+    compile project(path: ':gecbackend', configuration: 'android-endpoints')
 }
