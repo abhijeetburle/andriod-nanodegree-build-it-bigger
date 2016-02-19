@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JokesAndroidLib</string>
+
+    <string name="msg_no_joke">NO TIME FOR A JOKE</string>
+</resources>
