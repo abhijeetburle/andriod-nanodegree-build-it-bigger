@@ -1,6 +1,7 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Pair;
@@ -8,9 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-
 import com.udacity.gradle.builditbigger.service.GecBackendEndpointAsynTask;
 import com.udacity.gradle.jokes.JokerFactory;
+import com.udacity.gradle.jokesandroidlib.DisplayJokeActivity;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -44,11 +45,16 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Starts activity with a intent to display joke.
+     * The activity if present in the andriod lib(jokesandriodlib).
+     *
+     * @param view
+     */
     public void tellAJoke(View view){
-        //Toast.makeText(this, JokerFactory.getRandomJoker().tellAJoke(),
-        //       Toast.LENGTH_SHORT).show();
         new GecBackendEndpointAsynTask().execute(this);
     }
+
 
 
 }

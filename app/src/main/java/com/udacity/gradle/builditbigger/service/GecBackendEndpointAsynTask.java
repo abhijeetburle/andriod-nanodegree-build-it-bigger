@@ -1,6 +1,7 @@
 package com.udacity.gradle.builditbigger.service;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Pair;
 import android.widget.Toast;
@@ -9,7 +10,9 @@ import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
+import com.udacity.gradle.jokes.JokerFactory;
 import com.udacity.gradle.jokes.gecbackend.myApi.MyApi;
+import com.udacity.gradle.jokesandroidlib.DisplayJokeActivity;
 
 import java.io.IOException;
 
@@ -51,6 +54,9 @@ public class GecBackendEndpointAsynTask extends AsyncTask<Context, Void, String>
 
         @Override
         protected void onPostExecute(String result) {
-            Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+            Intent intentDisplayJoke  = new Intent(context, DisplayJokeActivity.class);
+            intentDisplayJoke.putExtra(DisplayJokeActivity.DISPLAY_JOKE_KEY,
+                    result);
+            context.startActivity(intentDisplayJoke);
         }
     }

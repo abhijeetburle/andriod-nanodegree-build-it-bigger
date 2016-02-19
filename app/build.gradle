@@ -33,5 +33,6 @@ dependencies {
     // Added for AdMob
     compile 'com.google.android.gms:play-services:7.3.0'
     compile project(':jokeslib')
+    compile project(':jokesandroidlib')
     compile project(path: ':gecbackend', configuration: 'android-endpoints')
 }
