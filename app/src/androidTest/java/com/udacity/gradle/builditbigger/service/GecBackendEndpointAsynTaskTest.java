@@ -1,10 +1,9 @@
+package com.udacity.gradle.builditbigger.service;
+
 import android.content.Context;
 import android.os.AsyncTask;
-import android.test.AndroidTestCase;
 import android.test.InstrumentationTestCase;
 import android.util.Log;
-
-import com.udacity.gradle.builditbigger.service.GecBackendEndpointAsynTask;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
@@ -29,8 +28,8 @@ public class GecBackendEndpointAsynTaskTest extends InstrumentationTestCase {
             protected void onPostExecute(String result) {
                 jokeTold[0] = result;
                 signal.countDown();
-
             }
+
         };
 
         runTestOnUiThread(new Runnable() {
@@ -39,12 +38,13 @@ public class GecBackendEndpointAsynTaskTest extends InstrumentationTestCase {
                 myTask.execute(context);
             }
         });
+
         signal.await(30, TimeUnit.SECONDS);
 
         assertTrue(
                 " Failed to fetch joke using GecBackendEndpointAsynTask",
                 jokeTold[0] != null && jokeTold[0].length() > 0);
 
-        Log.v(LOG_TAG, "testDoInBackground: End");
+        Log.v(LOG_TAG, "testDoInBackground: End ["+jokeTold[0]+"]");
     }
 }
