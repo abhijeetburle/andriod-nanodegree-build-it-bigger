@@ -22,6 +22,4 @@
         android:onClick="tellAJoke"
 
         />
-
-    <include layout="@layout/ads"/>
 </RelativeLayout>
