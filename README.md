@@ -1,8 +1,8 @@
 ### Screens
-![Alt text](/screens/screen-1.jpg?raw=true "Free App with Ads")
-![Alt text](/screens/screen-2.jpg?raw=true "Free App telling joke")
-![Alt text](/screens/screen-3.jpg?raw=true "Paid App without Ads")
-![Alt text](/screens/screen-4.jpg?raw=true "Paid App telling joke")
+![Alt text](./screens/screen-1.png?raw=true "Free App with Ads")
+![Alt text](./screens/screen-2.png?raw=true "Free App telling joke")
+![Alt text](./screens/screen-3.png?raw=true "Paid App without Ads")
+![Alt text](./screens/screen-4.png?raw=true "Paid App telling joke")
 
 ### Step 0: Starting Point
 
